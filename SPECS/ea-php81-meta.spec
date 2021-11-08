@@ -12,7 +12,7 @@
 # do not produce empty debuginfo package
 %global debug_package %{nil}
 
-Summary:       Package that installs PHP 8.0
+Summary:       Package that installs PHP 8.1
 Name:          %scl_name
 Version:       8.1.0beta3
 Vendor:        cPanel, Inc.
@@ -41,7 +41,7 @@ Requires:      %{?scl_prefix}pear
 
 %description
 This is the main package for %scl Software Collection,
-that install PHP 8.0 language.
+that install PHP 8.1 language.
 
 
 %package runtime
