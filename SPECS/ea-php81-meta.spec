@@ -14,7 +14,7 @@
 
 Summary:       Package that installs PHP 8.1
 Name:          %scl_name
-Version:       8.1.0rc5
+Version:       8.1.0rc6
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
 %define        release_prefix 1
@@ -23,7 +23,7 @@ Group:         Development/Languages
 License:       GPLv2+
 
 Source0:       macros-build
-Source1:       README.md    
+Source1:       README.md
 Source2:       LICENSE
 Source3:       whm_feature_addon
 
@@ -181,6 +181,6 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
-* Thu Nov 04 2021 Julian Brown <julian.brown@webpros.com> - 8.1.0rc5-1
+* Thu Nov 04 2021 Julian Brown <julian.brown@webpros.com> - 8.1.0rc6-1
 - ZC-8130: First build of php8.1
 
