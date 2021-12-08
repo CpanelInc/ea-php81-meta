@@ -1,0 +1,22 @@
+{
+    "remove_from_requires": [
+        "scl-utils-build",
+        "scl-utils"
+    ],
+    "do_not_build_packages": [
+        "ea-php81-build",
+        "ea-php81-scldevel"
+    ],
+    "dont_relativise_ontar": 1,
+    "disclude_sources" : [ "README.md" ],
+    "remove_from_install" : [ "(?:^|/)README$", "(?:^|/)enable$", "(?:^|/)ea-php81.7.gz" ],
+    "dont_override_config" : 1,
+    "no_files_pkgs": {
+        "ea-php81": "has no files, only brings in other packages i.e. a meta package"
+    },
+    "fix_dh_usrlocal": 1,
+    "override_vars": {
+        "full_package_name": "ea-php81-8.1.0",
+        "previous_version": "8.1.0"
+    }
+}
