@@ -14,7 +14,7 @@
 
 Summary:       Package that installs PHP 8.1
 Name:          %scl_name
-Version:       8.1.17
+Version:       8.1.18
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
 %define        release_prefix 1
@@ -181,6 +181,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Fri Apr 14 2023 Cory McIntire <cory@cpanel.net> - 8.1.18-1
+- EA-11356: Update ea-php81 from v8.1.17 to v8.1.18
+
 * Thu Mar 16 2023 Cory McIntire <cory@cpanel.net> - 8.1.17-1
 - EA-11300: Update ea-php81 from v8.1.16 to v8.1.17
 
