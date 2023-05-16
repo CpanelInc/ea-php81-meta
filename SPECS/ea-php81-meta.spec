@@ -9,15 +9,12 @@
 %global scl              %{scl_name_base}%{scl_name_version}
 %scl_package %scl
 
-# do not produce empty debuginfo package
-%global debug_package %{nil}
-
 Summary:       Package that installs PHP 8.1
 Name:          %scl_name
 Version:       8.1.19
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define        release_prefix 1
+%define        release_prefix 2
 Release:       %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -181,6 +178,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Mon May 16 2023 Brian Mendoza <brian.mendoza@cpanel.net> - 8.1.19-2
+- ZC-10936: Clean up Makefile and remove debug-package-nil
+
 * Fri May 12 2023 Cory McIntire <cory@cpanel.net> - 8.1.19-1
 - EA-11415: Update ea-php81 from v8.1.18 to v8.1.19
 
