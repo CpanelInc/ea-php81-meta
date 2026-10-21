@@ -14,7 +14,7 @@ Name:          %scl_name
 Version:       8.1.34
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define        release_prefix 1
+%define        release_prefix 2
 Release:       %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -178,6 +178,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Wed Oct 21 2026 Cory McIntire <cory.mcintire@webpros.com> - 8.1.34-2
+- EA-13611: Backport fix for CVE-2026-109618 and CVE-2026-109619
+
 * Thu Dec 18 2025 Dan Muey <daniel.muey@webpros.com> - 8.1.34-1
 - EA-13298: Update ea-php81 from v8.1.33 to v8.1.34
 
